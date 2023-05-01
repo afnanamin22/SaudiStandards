@@ -1,0 +1,113 @@
+@mixin FontAR {
+    color: white;
+    position: absolute;
+}
+.content {
+    h2 {
+        @include FontAR;
+        font-weight: 600;
+        font-size: 2.625rem;
+        line-height: 3.373rem;
+        top: 7.738rem;
+        right: 40rem;
+    }
+
+    p {
+        @include FontAR;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        top:12.813rem;
+        right: 43rem;
+        text-align: center;
+    }
+}
+.adjust-num {
+    font-weight: 600;
+    font-size: 2.625rem;
+    color:#4B9B2E;
+    position: absolute;
+    right: 40%;
+    top: 5%
+}
+.line
+{
+    position: absolute;
+    top: 50%;
+    width: 6.3rem; /* 16rem */
+    border: 1px dashed #BAD996;
+}
+.draw
+{
+   position: absolute;
+   top: 21.125rem;
+   right:42.5rem;
+   .two
+   {
+    position: absolute;
+    right: 10.75rem;
+    p {
+        right: 35%; 
+        color: #8BB052; 
+    }
+   }
+   .three{
+    position: absolute;
+    right: 21.5rem;
+    p {
+        right: 35%; 
+        color: #8BB052;  
+    }
+   }
+   .lineone{
+    right: 100%;
+   }
+   .linetwo
+   {
+    right:15rem;
+   }
+}
+.card
+{
+position: absolute;
+width: 80rem;
+/* height: 68.688rem; */
+height: 60rem;
+right: 13rem;
+top:29.13rem;
+background: #FFFFFF;
+box-shadow: 0px 14px 24px rgba(108, 108, 108, 0.1);
+}
+.card-body
+{
+    h2{
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 2.563rem;
+        font-family: 'URW DIN Arabic';
+        position: absolute;
+        top: 2.875rem;
+        right: 7.5rem;
+    }
+}
+.form-label
+{
+    position: absolute;
+    font-family: URW DIN Arabic;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    text-align: right;
+    top: 13.563rem;
+    right: 7.875rem;
+}
+.input-group
+{
+    top: 16.063rem;
+    left: 33rem;
+    input{
+       width:  39.5rem;
+       height: 3.25rem;
+       border-color: #EAEAEA;
+    }
+}

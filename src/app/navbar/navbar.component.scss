@@ -1,0 +1,44 @@
+.header {
+    height: 41.25rem;
+    max-width: 120rem;
+    background: linear-gradient(91.93deg, #4B9B2E -99.15%, #0091B4 106.9%);
+}
+.logo-container {
+    max-width: 18rem;
+    height: 5rem;
+    position: relative;
+    left:82rem;
+    top: 6rem;
+    img {
+        width: 100%;
+    }
+}
+
+.hidden {
+    color: transparent;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+.adjust-lan {
+    top: 3.43rem;
+    left: 10.25rem;
+
+    .adjust-font {
+        width: 2.65rem;
+        height: 0.9375rem;
+    }
+
+    .adjust-dropdown-arrow {
+        height: 0.36rem;
+        width: 0.825rem;
+    }
+}
+@mixin FontAR {
+    color: white;
+    position: absolute;
+}
+
+
+

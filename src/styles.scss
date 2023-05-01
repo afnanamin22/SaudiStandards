@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+    @font-face {
+        font-family: 'URW DIN Arabic';
+        src: url("../../app/src/assets/alfont_com_AlFont_com_URW-DIN-Arabic-1.ttf");
+    }
+@import url(assets/style/cards/card.scss);
+@import url(assets/style/colors/paging.scss);
