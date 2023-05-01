@@ -1,0 +1,98 @@
+@mixin FontAR {
+    color: white;
+    position: absolute;
+}
+.registergroup
+{
+    position: relative;
+    top: -43rem;
+    left: -12rem;
+}
+
+.content {
+
+    h2 {
+        @include FontAR;
+        font-weight: 600;
+        font-size: 2.625rem;
+        line-height: 3.375rem;
+        top: 16.1875rem;
+        left: 46.375rem;
+    }
+
+    h3 {
+        @include FontAR;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        top: 21.56rem;
+        left: 45.9375rem;
+    }
+}
+@mixin CardFont {
+    font-family: 'URW DIN Arabic';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    position: absolute;
+    bottom: 2.625rem;
+}
+a
+{
+    text-decoration: none;
+    text-decoration-style: none;
+    color: black;
+    cursor: pointer;
+
+}
+@mixin CardImg
+{
+    position: absolute;
+}
+.card-1 {
+    a {
+        @include CardFont;
+        right: 6.75rem;
+    }
+    img{
+       @include CardImg;
+        left: 6.8rem;
+        bottom: 6.9rem;
+        width:9.752rem ;
+        height: 9.124rem;
+    }
+}
+
+.card-2 {
+    left: 42.8rem;
+    a {
+        @include CardFont;
+        right: 3.5rem;
+    }
+    img{
+        @include CardImg;
+         left:6.688rem;
+         bottom: 6.9rem;
+         width: 8.598rem;
+         height:7.36rem ;
+     }
+}
+
+.card-3 {
+    left: 16.7rem;
+
+    a {
+        @include CardFont;
+        right: 8.5rem;
+    }
+    img{
+        @include CardImg;
+         bottom: 6.945rem;
+         left: 5.313rem;
+         width: 11.375rem;
+         height: 6.743rem;
+     }
+}
+
+

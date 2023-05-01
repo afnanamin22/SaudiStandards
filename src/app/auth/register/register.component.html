@@ -1,0 +1,266 @@
+<div class="container">
+
+    <header class="position-relative adj-space">
+        <div class="content d-flex align-items-center flex-column">
+            <h2>إنشاء حساب الشركة المصنعة</h2>
+            <p>إهلًا بك، قم بإنشاء حساب الشركة المصنعة بتعبئة<br> .جميع الحقول المطلوبة بالخطوات التالية</p>
+        </div>
+        <div class="draw d-flex">
+            <div class="three d-flex justify-content-center  align-items-center">
+                <img *ngIf="Step!=3" [src]=Greenimg alt="">
+                <img *ngIf="Step==3" [src]=Whiteimg alt="">
+                <p class="adjust-num" [style.color]="Step==3?'#4B9B2E':'#8BB052'">3</p>
+            </div>
+            <div class="line linetwo"></div>
+            <div class="two d-flex justify-content-center  align-items-center">
+                <img *ngIf="Step==1" [src]=Greenimg alt="">
+                <img *ngIf="Step!=1" [src]=Whiteimg alt="">
+                <p class="adjust-num" [style.color]="Step!=1?'#4B9B2E':'#8BB052'">2</p>
+            </div>
+            <div class="line lineone"></div>
+            <div class="one d-flex justify-content-center align-items-center">
+                <img [src]=Whiteimg alt="">
+                <p class="adjust-num">1</p>
+            </div>
+        </div>
+
+    </header>
+
+        <form action="" [formGroup]="RegisterForm" *ngIf="Formid=='l'" >
+            <div class="bg-white firstForm" *ngIf="Step==1" formGroupName="BasicInfo">
+            <h2 class="text-end form-text py-5 adj-signUp-header">المعلومات الأساسية للشركة المصنعة</h2>
+            <div class="row">
+                <div class="col-md-5 text-end space">
+                    <div class="input-group-text bg-white d-flex justify-content-between">
+                        <input type="radio" name="saudi" id="isNotSaudi" formControlName="isSaudi" >
+                        <label for="isNotSaudi" class="mb-0">مصنع غير سعودي </label>
+                    </div> 
+                    <div class="input-adj">
+                        <label for="company-name-ar" class="mt-3"><span class="text-important">*</span>اسم الشركة المصنعة (
+                            بالعربية)</label>
+                            <div class="input-with-placeholder">
+                                <input type="text" name="" id="company-name-ar" class="form-control" formControlName="nameAr">
+                                <p class="placeholder-text">اسم الشركة المصنعة ( بالعربية )</p>
+                               </div>
+                        
+                    </div>
+                    <div class="input-adj">
+                        <label for="fax-num">رقم الفاكس</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="fax-num" class="form-control" formControlName="fax">
+                            <p class="placeholder-text">ادخل رقم الفاكس</p>
+                           </div>
+                        
+                    </div>
+
+                    <div class="input-adj">
+                        <label for="mail-box"><span class="text-important">*</span>الصندوق البريدي</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="mail-box" class="form-control" formControlName="poBox">
+                            <p class="placeholder-text">ادخل الصندوق البريدي</p>
+                           </div>
+                       
+                    </div>
+
+                    <div class="input-adj">
+                        <label for="city"><span class="text-important">*</span>المدينة</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="city" class="form-control" formControlName="locationUrl">
+                            <p class="placeholder-text">المدينة</p>
+                           </div>
+                      
+                    </div>
+
+                    <div class="input-adj">
+                        <label for="book-num"><span class="text-important">*</span>رقم السجل التجاري</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="book-num" class="form-control"
+                            formControlName="commercialRegisterstring">
+                            <p class="placeholder-text"> رقم السجل التجاري</p>
+                           </div>
+                        
+
+                    </div>
+                    <div class="input-adj">
+                        <label for="website">الموقع الإلكتروني</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="website" class="form-control" formControlName="website">
+                            <p class="placeholder-text">الموقع الإلكتروني</p>
+                           </div>
+                        
+                    </div>
+
+                </div>
+                <div class="col-md-5 text-end space">
+                    <div class="input-group-text bg-white d-flex justify-content-between">
+                        <input type="radio" name="saudi" id="isSaudi" formControlName="isSaudi">
+                        <label for="isSaudi" class="mb-0">مصنع سعودي </label>
+                    </div>
+
+                    <div class="input-adj">
+                        <label for="company-name" class="mt-3"> <span class="text-important">*</span>اسم الشركة المصنعة (  بالإنجليزية)</label>
+                       <div class="input-with-placeholder">
+                        <input type="text" name="" id="company-name" class="form-control" formControlName="nameEn">
+                        <p class="placeholder-text">اسم الشركة المصنعة ( بالإنجليزية )</p>
+                       </div>
+                    </div>
+                    <div class="input-adj">
+                        <label for="contact-num"> <span class="text-important">*</span>رقم للتواصل</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="contact-num" class="form-control" formControlName="phone">
+                            <p class="placeholder-text">ادخل رقم للتواصل</p>
+                           </div>
+                       
+                    </div>
+                    <div class="input-adj">
+                        <label for="mail-num"><span class="text-important">*</span>الرمز البريدي</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="mail-num" class="form-control" formControlName="postcode">
+                            <p class="placeholder-text">ادخل الرمز البريدي</p>
+                           </div>
+                        
+                    </div>
+                    <div class="input-adj position-relative">
+                        <label for="country"><span class="text-important">*</span>البلد</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="country" class="form-control" formControlName="city">
+                        <i class="fa-solid fa-chevron-down"></i>
+                            <p class="placeholder-text">البلد</p>
+                           </div>
+                      
+
+                        <!-- drop down choices -->
+                        <!--   <div class="btn-group">
+                            <i class="fa-solid fa-chevron-down text-white adjust-dropdown-arrow"></i>
+                            <button class="btn hidden dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                              aria-expanded="false"></button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">AR</a></li>
+                            </ul>
+                          </div> -->
+                    </div>
+                    <div class="input-adj">
+                        <label for="address"><span class="text-important">*</span>العنوان</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="address" class="form-control" formControlName="address">
+                            <p class="placeholder-text">  العنوان</p>
+                           </div>
+                     
+                    </div>
+
+                    <div class="input-adj">
+                        <label for="deadline"><span class="text-important">*</span>تاريخ إنتهاء السجل التجاري</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" name="" id="deadline" class="form-control"
+                            formControlName="commercialRegisterstringEndDate">
+                            <p class="placeholder-text"> ادخل تاريخ الإنتهاء</p>
+                           </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="bg-white secondForm" *ngIf="Step==2" formGroupName="MoreInfo">
+            <h2 class="text-end form-text py-5 adj-signUp-header">معلومات اعتماد الشركة المصنعة</h2>
+            <div class="row">
+                <div class="col-md-10 space">
+                <div class="d-flex flex-column text-end">
+                    <label for="file-upload"><span class="text-important">*</span>خطاب التفويض</label>
+                    <div class="uploadd w-50 form-control">
+                        <i class="fa-solid fa-arrow-up-from-bracket text-black upload-icon"></i>
+                    </div>
+                    <input type="file" id="file-upload" formControlName="authorityLetterUrl">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="bg-white secondForm" *ngIf="Step==3" formGroupName="LastInfo">
+            <h2 class="text-end form-text pt-5 adj-signUp-header">معلومات ممثل الشركة المصنعة</h2>
+            <div class="row">
+                <div class="col-md-5 space text-end">
+                    <div class="input-adj">
+                        <label for="company-name-ar"><span class="text-important">*</span>رقم للتواصل</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" formControlName="contact1_phone" id="company-name-ar" class="form-control" >
+                            <p class="placeholder-text">ادخل رقم للتواصل</p>
+                           </div>
+                    </div>
+                    <div class="input-adj">
+                        <label for="fax-num"><span class="text-important">*</span>المسمى الوظيفي</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" formControlName="contact1_position" id="fax-num" class="form-control" >
+                            <p class="placeholder-text"> المسمى الوظيفي </p>
+                           </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-5 space text-end">
+                    <div class="input-adj">
+                        <label for="company-name-ar"><span class="text-important">*</span>اسم ممثل الجهة</label>
+                        <div class="input-with-placeholder">
+                            <input type="text" formControlName="contact1_name" id="company-name-ar" class="form-control">
+                            <p class="placeholder-text">  اسم ممثل الجهة </p>
+                           </div>
+                       
+                    </div>
+                    <div class="input-adj">
+                        <label for="fax-num"><span class="text-important">*</span>البريد الإلكتروني</label>
+                        <div class="input-with-placeholder">
+                            <input type="email" formControlName="contact1_email" id="fax-num" class="form-control">
+                            <p class="placeholder-text"> البريد الإلكتروني </p>
+                           </div>
+                       
+                    </div>
+                </div>
+                <h2 class="text-end form-text pt-3 adj-signUp-header">معلومات الحساب </h2>
+                <div class="col-md-5 space text-end">
+                    <div class="input-adj opacity-0">
+                        <label for="fax-num"><span class="text-important">*</span>المسمى الوظيفي</label>
+                        <div class="input-with-placeholder">
+                            <input type="password" formControlName="password" id="company-name-ar" class="form-control">
+                            <p class="placeholder-text">كلمة المرور</p>
+                           </div>
+                    </div>
+                    <div class="input-adj">
+                        <label for="company-name-ar"><span class="text-important">*</span>تأكيد كلمة المرور </label>
+                        <div class="input-with-placeholder">
+                            <input type="password" formControlName="password" id="company-name-ar" class="form-control">
+                            <p class="placeholder-text"> تأكيد كلمة المرور</p>
+                           </div>
+                    </div>
+                </div>
+                <div class="col-md-5 space text-end">
+                    <div class="input-adj">
+                        <label for="fax-num"><span class="text-important">*</span>البريد الإلكتروني الرسمي للجهة</label>
+                        <div class="input-with-placeholder">
+                            <input type="email" formControlName="email" id="fax-num" class="form-control">
+                            <p class="placeholder-text">  البريد الإلكتروني الرسمي للجهة</p>
+                           </div>
+                       
+                    </div>
+                    <div class="input-adj">
+                        <label for="company-name-ar"><span class="text-important">*</span>كلمة المرور</label>
+                        <div class="input-with-placeholder">
+                            <input type="password" formControlName="password" id="company-name-ar" class="form-control">
+                            <p class="placeholder-text">كلمة المرور</p>
+                           </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary" *ngIf="Step ==3" (click)="redirect()">أنشاء</button>
+            <a class="btn btn-outline-primary mx-3" (click)="previous()"  *ngIf="Step !=1 " >رجوع</a>
+        <button type="submit" class="btn btn-primary" *ngIf="Step !=3 " (click)="next()">التالي</button>
+        
+        </div>
+        </form> 
+ </div>
+   
+
+
