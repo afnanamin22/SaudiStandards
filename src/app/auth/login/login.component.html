@@ -1,4 +1,29 @@
-<h2>تسجيل الدخول</h2>
-<p>  <br>أهلا بك  ، قم بتعبئة جميع الحقول المطلوبة 
-    لتسجيل الدخول</p>
+<div class="container">
+    <header class="content">
+        <h1 class="content-header"> تسجيل الدخول </h1>
+      <h3 class="content-par">      أهلا بك  ، قم بتعبئة جميع الحقول المطلوبة</h3>
+      <h3 class="content-par"> لتسجيل الدخول</h3>
+      </header>
+    <div class="card login-form">
+        <div class="card-body">
+        <form [formGroup]="loginForm">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="company-password" class="label-form label-form-start"><span class="text-important">*</span>كلمة المرور</label>
+                        <input type="password" formControlName="password" id="company-password" class="form-control" placeholder="ادخل كلمة المرور">
+                    </div>
+                </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="company-email" class="label-form label-form-end"><span class="text-important">*</span>البريد الإلكتروني</label>
+                    <input type="email" formControlName="email" id="company-email" class="form-control" placeholder="ادخل البريد الإلكتروني">
+                </div>
+            </div>   
+        </div>
+    </form>
+    <button type="submit" class="btn login-btn" (click)="GoToDashboard()">تسجيل الدخول</button>
+      </div>
+    </div>
+</div>
 

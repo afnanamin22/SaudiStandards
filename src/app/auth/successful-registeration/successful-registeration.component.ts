@@ -15,6 +15,6 @@ export class SuccessfulRegisterationComponent implements OnInit {
   }
   signIn()
   {
-    this._Router.navigate(['/login'])
+    this._Router.navigate(['/auth/login'])
   }
 }

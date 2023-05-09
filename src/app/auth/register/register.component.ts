@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
   }
   redirect()
   {
-    this._Router.navigate(['/success'])
+    this._Router.navigate(['/auth/success'])
   }
 
 }

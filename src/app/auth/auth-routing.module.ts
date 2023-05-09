@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
 import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SuccessfulRegisterationComponent } from './successful-registeration/successful-registeration.component';
+import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'register',pathMatch:'full'},
-  {path:'register',component:RegisterComponent},
-  {path:'login',component:LoginComponent},
-  {path:'logout',component:LogoutComponent},
-  {path:'confirmEmail',component:ConfirmEmailComponent},
-  {path:'success',component:SuccessfulRegisterationComponent},
-  {path:'resetPassword',component:ResetPasswordComponent}
+  {path:'',component:AuthComponent,children:[
+    {path:'register/:id',component:RegisterComponent},
+      {path:'success',component:SuccessfulRegisterationComponent},
+      {path:'login',component:LoginComponent},
+  ]}
+      
 ];
 
 @NgModule({

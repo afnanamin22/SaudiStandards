@@ -3,5 +3,12 @@
         font-family: 'URW DIN Arabic';
         src: url("../../app/src/assets/alfont_com_AlFont_com_URW-DIN-Arabic-1.ttf");
     }
-@import url(assets/style/cards/card.scss);
-@import url(assets/style/colors/paging.scss);
+    @import url(assets/style/cards/main-card.scss);
+    @import url(assets/style/cards/login-form-card.scss);
+    @import url(assets/style/cards/register-1-form-card.scss);
+    @import url(assets/style/colors/paging.scss);
+    @import url(assets/style/form/placeholder.scss);
+    @import url(assets/style/form/input-adjust.scss);
+    @import url(assets/style/form/label-adjust.scss);
+    @import url(assets/style/buttons/loginButton.scss);
+    @import url(assets/style/header/header-content.scss);

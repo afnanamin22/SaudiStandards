@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import{HttpClientModule}from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';

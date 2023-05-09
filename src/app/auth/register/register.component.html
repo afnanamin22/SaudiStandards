@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-md-5 text-end space">
                     <div class="input-group-text bg-white d-flex justify-content-between">
-                        <input type="radio" name="saudi" id="isNotSaudi" formControlName="isSaudi" >
+                        <input type="radio" id="isNotSaudi" formControlName="isSaudi" value="saudi">
                         <label for="isNotSaudi" class="mb-0">مصنع غير سعودي </label>
                     </div> 
                     <div class="input-adj">
@@ -52,7 +52,6 @@
                            </div>
                         
                     </div>
-
                     <div class="input-adj">
                         <label for="mail-box"><span class="text-important">*</span>الصندوق البريدي</label>
                         <div class="input-with-placeholder">
@@ -93,7 +92,7 @@
                 </div>
                 <div class="col-md-5 text-end space">
                     <div class="input-group-text bg-white d-flex justify-content-between">
-                        <input type="radio" name="saudi" id="isSaudi" formControlName="isSaudi">
+                        <input type="radio" id="isSaudi" formControlName="isSaudi" value="saudi">
                         <label for="isSaudi" class="mb-0">مصنع سعودي </label>
                     </div>
 
@@ -254,13 +253,14 @@
         </div>
 
         <div class="btn-group">
-            <button type="submit" class="btn btn-primary" *ngIf="Step ==3" (click)="redirect()">أنشاء</button>
+            <button type="submit" class="btn btn-primary" *ngIf="Step ==3" (click)="redirect()" >أنشاء</button>
             <a class="btn btn-outline-primary mx-3" (click)="previous()"  *ngIf="Step !=1 " >رجوع</a>
         <button type="submit" class="btn btn-primary" *ngIf="Step !=3 " (click)="next()">التالي</button>
         
         </div>
         </form> 
  </div>
-   
+
+ 
 
 

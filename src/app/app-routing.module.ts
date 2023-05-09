@@ -6,7 +6,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'main'},
   {path:'main',component:MainpageComponent},
-  {path:'register/:id',loadChildren:()=>import('./auth/auth.module').then((x)=>x.AuthModule)},
+  {path:'auth',loadChildren:()=>import('./auth/auth.module').then((x)=>x.AuthModule)},
   {path:'dashboard',loadChildren:()=>import('./dashboard/dashboard.module').then((x)=>x.DashboardModule)},
   {path:'website',loadChildren:()=>import('./website/website.module').then((x)=>x.WebsiteModule)},
   {path:'**',component:NotfoundComponent},
